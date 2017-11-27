@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="nginx," />
 
 
 
@@ -79,16 +79,23 @@
 
 
 
-<meta name="description" content="一起来玩LOL啊">
-<meta property="og:type" content="website">
-<meta property="og:title" content="cycleHo的博客">
-<meta property="og:url" content="http://yoursite.com/blog/index.html">
+<meta name="description" content="阿里云CentOs 7下安装nginx安装所需环境Nginx 是 C语言 开发，建议在 Linux 上运行，当然，也可以安装 Windows 版本，本篇则使用 CentOS 7 作为安装环境。 一. gcc 安装安装 nginx 需要先将官网下载的源码进行编译，编译依赖 gcc 环境，如果没有 gcc 环境，则需要安装">
+<meta name="keywords" content="nginx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="阿里云CentOs 7安装nginx">
+<meta property="og:url" content="http://yoursite.com/blog/2017/11/28/阿里云CentOs 7安装nginx/index.html">
 <meta property="og:site_name" content="cycleHo的博客">
-<meta property="og:description" content="一起来玩LOL啊">
+<meta property="og:description" content="阿里云CentOs 7下安装nginx安装所需环境Nginx 是 C语言 开发，建议在 Linux 上运行，当然，也可以安装 Windows 版本，本篇则使用 CentOS 7 作为安装环境。 一. gcc 安装安装 nginx 需要先将官网下载的源码进行编译，编译依赖 gcc 环境，如果没有 gcc 环境，则需要安装： 1yum install gcc-c++ 二. PCRE pcre-deve">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://www.heyuanwei.xin/assets/blog/image/nginxAutoStart.jpg">
+<meta property="og:image" content="http://www.heyuanwei.xin/assets/blog/image/nginxConf.jpg">
+<meta property="og:image" content="http://www.heyuanwei.xin/assets/blog/image/aliyunPort.jpg">
+<meta property="og:image" content="http://www.heyuanwei.xin/assets/blog/image/nginxSuccess.jpg">
+<meta property="og:updated_time" content="2017-11-27T14:12:21.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="cycleHo的博客">
-<meta name="twitter:description" content="一起来玩LOL啊">
+<meta name="twitter:title" content="阿里云CentOs 7安装nginx">
+<meta name="twitter:description" content="阿里云CentOs 7下安装nginx安装所需环境Nginx 是 C语言 开发，建议在 Linux 上运行，当然，也可以安装 Windows 版本，本篇则使用 CentOS 7 作为安装环境。 一. gcc 安装安装 nginx 需要先将官网下载的源码进行编译，编译依赖 gcc 环境，如果没有 gcc 环境，则需要安装： 1yum install gcc-c++ 二. PCRE pcre-deve">
+<meta name="twitter:image" content="http://www.heyuanwei.xin/assets/blog/image/nginxAutoStart.jpg">
 
 
 
@@ -118,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/blog/"/>
+  <link rel="canonical" href="http://yoursite.com/blog/2017/11/28/阿里云CentOs 7安装nginx/"/>
 
 
 
 
 
-  <title>cycleHo的博客</title>
+  <title>阿里云CentOs 7安装nginx | cycleHo的博客</title>
   
 
 
@@ -143,8 +150,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -247,9 +253,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -279,9 +285,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2017/11/28/阿里云CentOs 7安装nginx/" itemprop="url">阿里云CentOs 7安装nginx</a></h1>
+          <h1 class="post-title" itemprop="name headline">阿里云CentOs 7安装nginx</h1>
         
 
         <div class="post-meta">
@@ -353,9 +357,7 @@
       
 
       
-        
-          
-            <h1 id="阿里云CentOs-7下安装nginx"><a href="#阿里云CentOs-7下安装nginx" class="headerlink" title="阿里云CentOs 7下安装nginx"></a>阿里云CentOs 7下安装nginx</h1><h2 id="安装所需环境"><a href="#安装所需环境" class="headerlink" title="安装所需环境"></a>安装所需环境</h2><p>Nginx 是 C语言 开发，建议在 Linux 上运行，当然，也可以安装 Windows 版本，本篇则使用 CentOS 7 作为安装环境。</p>
+        <h1 id="阿里云CentOs-7下安装nginx"><a href="#阿里云CentOs-7下安装nginx" class="headerlink" title="阿里云CentOs 7下安装nginx"></a>阿里云CentOs 7下安装nginx</h1><h2 id="安装所需环境"><a href="#安装所需环境" class="headerlink" title="安装所需环境"></a>安装所需环境</h2><p>Nginx 是 C语言 开发，建议在 Linux 上运行，当然，也可以安装 Windows 版本，本篇则使用 CentOS 7 作为安装环境。</p>
 <h3 id="一-gcc-安装"><a href="#一-gcc-安装" class="headerlink" title="一. gcc 安装"></a>一. gcc 安装</h3><p>安装 nginx 需要先将官网下载的源码进行编译，编译依赖 gcc 环境，如果没有 gcc 环境，则需要安装：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install gcc-c++</span><br></pre></td></tr></table></figure>
 <h4 id="二-PCRE-pcre-devel-安装"><a href="#二-PCRE-pcre-devel-安装" class="headerlink" title="二. PCRE pcre-devel 安装"></a>二. PCRE pcre-devel 安装</h4><p>PCRE(Perl Compatible Regular Expressions) 是一个Perl库，包括 perl 兼容的正则表达式库。nginx 的 http 模块使用 pcre 来解析正则表达式，所以需要在 linux 上安装 pcre 库，pcre-devel 是使用 pcre 开发的一个二次开发库。nginx也需要此库。命令：</p>
@@ -386,8 +388,6 @@
 <h4 id="阿里云开放端口（作为小菜鸟这里卡主我两天）"><a href="#阿里云开放端口（作为小菜鸟这里卡主我两天）" class="headerlink" title="阿里云开放端口（作为小菜鸟这里卡主我两天）"></a>阿里云开放端口（作为小菜鸟这里卡主我两天）</h4><p>登录到阿里云官网。点击控制台，选择自己服务器。点击安全组–&gt;配置规则–&gt;添加安全组规则，然后就开放刚刚在nginx.conf设置的端口号<br><img src="http://www.heyuanwei.xin/assets/blog/image/aliyunPort.jpg" alt="image"></p>
 <h4 id="在浏览器访问你的域名，当你看到下面的图就成功安装nginx了"><a href="#在浏览器访问你的域名，当你看到下面的图就成功安装nginx了" class="headerlink" title="在浏览器访问你的域名，当你看到下面的图就成功安装nginx了"></a>在浏览器访问你的域名，当你看到下面的图就成功安装nginx了</h4><p><img src="http://www.heyuanwei.xin/assets/blog/image/nginxSuccess.jpg" alt="image"></p>
 
-          
-        
       
     </div>
     
@@ -402,264 +402,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/blog/2017/11/27/first/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cycleHo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="cycleHo的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2017/11/27/first/" itemprop="url">第一个博客</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-27T20:43:20+08:00">
-                2017-11-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/blog/tags/nginx/" rel="tag"># nginx</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>这是第一个博客的内容</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/blog/2017/11/27/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cycleHo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="cycleHo的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2017/11/27/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-27T19:50:10+08:00">
-                2017-11-27
-              </time>
+              <a href="/blog/2017/11/27/first/" rel="next" title="第一个博客">
+                <i class="fa fa-chevron-left"></i> 第一个博客
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -669,10 +441,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -680,6 +453,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -700,8 +477,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -767,6 +553,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#阿里云CentOs-7下安装nginx"><span class="nav-number">1.</span> <span class="nav-text">阿里云CentOs 7下安装nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装所需环境"><span class="nav-number">1.1.</span> <span class="nav-text">安装所需环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-gcc-安装"><span class="nav-number">1.1.1.</span> <span class="nav-text">一. gcc 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#二-PCRE-pcre-devel-安装"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">二. PCRE pcre-devel 安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三-zlib-安装"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">三. zlib 安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四-OpenSSL-安装"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">四. OpenSSL 安装</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#官网下载"><span class="nav-number">1.2.</span> <span class="nav-text">官网下载</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用wget命令下载到-usr-local-src"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">使用wget命令下载到/usr/local/src</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解压"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">解压</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-使用默认配置装到-usr-local-nginx"><span class="nav-number">1.2.0.3.1.</span> <span class="nav-text">1.使用默认配置装到/usr/local/nginx</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2自定义配置（不推荐）"><span class="nav-number">1.2.0.3.2.</span> <span class="nav-text">2自定义配置（不推荐）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编译安装"><span class="nav-number">1.2.0.4.</span> <span class="nav-text">编译安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#启动、停止nginx"><span class="nav-number">1.2.0.5.</span> <span class="nav-text">启动、停止nginx</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#重启nginx"><span class="nav-number">1.2.0.6.</span> <span class="nav-text">重启nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-先停止再启动（推荐）："><span class="nav-number">1.2.0.6.1.</span> <span class="nav-text">1.先停止再启动（推荐）：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-重新加载配置文件："><span class="nav-number">1.2.0.6.2.</span> <span class="nav-text">2.重新加载配置文件：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开机自启动"><span class="nav-number">1.2.0.7.</span> <span class="nav-text">开机自启动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置文件"><span class="nav-number">1.2.0.8.</span> <span class="nav-text">配置文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#阿里云开放端口（作为小菜鸟这里卡主我两天）"><span class="nav-number">1.2.0.9.</span> <span class="nav-text">阿里云开放端口（作为小菜鸟这里卡主我两天）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在浏览器访问你的域名，当你看到下面的图就成功安装nginx了"><span class="nav-number">1.2.0.10.</span> <span class="nav-text">在浏览器访问你的域名，当你看到下面的图就成功安装nginx了</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -907,6 +709,10 @@
 
 
   
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 
