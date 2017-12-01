@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[基于hexo和github搭建个人博客（二个性化）]]></title>
+    <url>%2Fblog%2F2017%2F12%2F01%2F%E5%9F%BA%E4%BA%8Ehexo%E5%92%8Cgithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%E4%B8%AA%E6%80%A7%E5%8C%96%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[添加tags、categories、about的页面在blog/themes/next/_config_yml文件下修改：把要添加的模块前面的井号#去掉。123456789menu: home: / || home #about: /about/ || user #tags: /tags/ || tags #categories: /categories/ || th archives: /archives/ || archive #schedule: /schedule/ || calendar #sitemap: /sitemap.xml || sitemap #commonweal: /404/ || heartbeat 修改后：123456789menu: home: / || home about: /about/ || user tags: /tags/ || tags categories: /categories/ || th archives: /archives/ || archive #schedule: /schedule/ || calendar #sitemap: /sitemap.xml || sitemap #commonweal: /404/ || heartbeat 在终端输入：123hexo new page tagshexo new page categorieshexo new page about 在目录blog/source下面就会多了tags、categories、about的文件夹tags目录下的index.md12345---title: tagsdate: 2017-11-30 23:42:37tags: &quot;tags&quot;--- categories目录下的index.md12345---title: categoriesdate: 2017-11-30 23:42:37type: &quot;categories&quot;--- about目录下的index.md12345678910111213141516---title: aboutdate: 2017-11-30 23:42:37type: &quot;about&quot;------title: aboutdate: 2017-11-28 18:23:24---## Hello 大家好### 这里是一只前端菜鸟，欢迎大家讨论交流学习- #### From cycle_Ho- #### Contact me：&gt; - ###### QQ：494451589&gt; - ###### Email：494451589@qq.com 这就增加了tags、categories、about的页面以后写文章则在开头： 123456---title: yourTitledate: 2017-12-1 14:12:36tags: [tags1,tags2]categories: 分类--- 增加站内搜索安装hexo-generator-searchdb1npm install hexo-generator-searchdb --save 在blog/_config.yml添加search字段12345search: path: search.xml field: post format: html limit: 10000 在blog/themes/next/_config.yml找到并修改enable： true12local_search: enable: false 刷新浏览器完成了 修改首页文章不展示全部在blog/themes/next/_config.yml文件找auto_excerpt到并修改为：123auto_excerpt: enable: true length: 150 //我觉得是展示长度 修改Sidebar头像在blog/themes/next/_config.yml文件找到Sidebar Avatar：1234# Sidebar Avatar#in theme directory(source/images): /images/avatar.gif#in site directory(source/uploads): /uploads/avatar.gif#avatar: /images/avatar.gif 并修改为：1234# Sidebar Avatarin theme directory(source/images): /images/avatar.gifin site directory(source/uploads): /uploads/avatar.gifavatar: /images/avatar.gif 在blog/themes/next/source/images目录下替换avatar.gif即可增加社交途径在blog/themes/next/_config.yml文件找到：把前面井号#去掉即为增加（主要大小写） 12345678910111213141516171819social: Github: https://github.com/cycleho || github Weibo: https://weibo.com/u/1825215421?referflag=1001030102 || weibo #E-Mail: mailto:yourname@gmail.com || envelope #Google: https://plus.google.com/yourname || google #Twitter: https://twitter.com/yourname || twitter #FB Page: https://www.facebook.com/yourname || facebook #VK Group: https://vk.com/yourname || vk #StackOverflow: https://stackoverflow.com/yourname || stack-overflow #YouTube: https://youtube.com/yourname || youtube #Instagram: https://instagram.com/yourname || instagram #Skype: skype:yourname?call|chat || skypesocial_icons: enable: true icons_only: true//是否只显示图标 transition: false Github: github Weibo: weibo 最后其实想增加更多功能要了解主配置文件（blog/_config.yml）和主题配置文件（blog/themes/next/_config.yml）。 参考：http://theme-next.iissnan.com/]]></content>
+      <categories>
+        <category>搭建博客</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[基于hexo和github搭建个人博客（一）]]></title>
+    <url>%2Fblog%2F2017%2F11%2F28%2F%E5%9F%BA%E4%BA%8Ehexo%E5%92%8Cgithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[基于hexo和github搭建个人博客搭建Github注册github账号在自己的github上创建仓库 (new repository) 安装Git由于安装Git比较简单这里不细说了，请自行百度，当输入命令后输出版本信息即为安装成功了12# git --versiongit version 1.8.3.1 安装nodejs请查看上篇文章 安装Hexo以上所有都安装完成之后再安装Hexo：1sudo npm install hexo-cli -g 编写发布创建博客将下面的 blogname替换成你自己的blogname，执行成功后，会创建出一个名为 blogname 的文件夹。1hexo init blogname 更改配置主题安装（这里安装挺热门的next主题），也有更多主题。12cd username.github.iogit clone https://github.com/iissnan/hexo-theme-next themes/next 主配置（blogname/_config.yml）注意：每个冒号：后面都要加一个空格1234567title: cycle_ho //你博客的名字 author: cycle_ho //你的名字 language: zh-Hans //语言 中文 theme: next //刚刚安装的主题名称 deploy: type: git //使用Git 发布 repo: https://github.com/username/username.git // 刚创建的Github仓库 写文章,注意：每个冒号：后面都要加一个空格使用的是markdown格式（自己百度）。但是头部应该这样写： 123456--- title: First blog date： 2017-11-30 23:30:07 tags： [tags1,tags2]//标签，需要安装，下面会讲到 categories: //分类，需要安装，下面也会讲到 --- 安装hexo-deployer-git自动部署发布工具1npm install hexo-deployer-git --save 发布测试没问题后，我们就生成静态网页文件发布至我们的Github pages 中。 123hexo clean //清除页面（一定要先清除）hexo g //生成页面hexo d //发布 当然也可以1hexo clean &amp;&amp; hexo g &amp;&amp; hexo g 然后按提示输入Github账号的信息就可以了，这样你就完成了你的个人博客了你可以输入：http://cycleho.github.io/blog[/](http://cycleho.github.io/blog/)就可以访问了 最后对于初学者，可以写markdown的方式有很多： [x] CSDN网页在线， [x] markdownPad软件， [x] 有道云笔记如果发现其他更好用的可以推荐给我哦。参考：http://www.jianshu.com/p/4eaddcbe4d12]]></content>
+      <categories>
+        <category>搭建博客</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[阿里云CentOs 7安装node]]></title>
     <url>%2Fblog%2F2017%2F11%2F28%2F%E9%98%BF%E9%87%8C%E4%BA%91CentOs%207%E5%AE%89%E8%A3%85nodejs%2F</url>
     <content type="text"><![CDATA[阿里云CentOs 7安装nginx使用XShell连接到目标服务器后把yum更新到最新版本：1yum -y update 将使用最新源代码构建Node.js，要进行软件的安装，需要一组用来编译源代码的开发工具：1yum -y groupinstall &quot;Development Tools&quot; 安装node.js开始安装Node.js，先进入/usr/src文件夹，从Node.js的站点中获取压缩档源代码, 我选择的版本为v6.11.3：12cd /usr/local/srcwget http://nodejs.org/dist/v0.10.18/node-v6..11.3.tar.gz 解压缩源文件，并且进入到压缩后的文件夹中:12tar zxf node-v6..11.3.tar.gz cd node-v6..11.3 执行配置脚本来进行编译预处理:1./configure 开始编译源代码:1make&amp;&amp;make install 测试是否安装成功12node -vnpm -v //npm是模块管理器 若每条命令后面输出版本号即安装成功]]></content>
@@ -21,11 +45,6 @@
       <tags>
         <tag>nginx</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[第一个博客]]></title>
-    <url>%2Fblog%2F2017%2F11%2F27%2Ffirst%2F</url>
-    <content type="text"><![CDATA[这是第一个博客的内容]]></content>
   </entry>
   <entry>
     <title><![CDATA[Hello World]]></title>
