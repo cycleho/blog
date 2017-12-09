@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[git首次上传代码和更新代码的方法]]></title>
+    <url>%2Fblog%2F2017%2F12%2F09%2Fgit%E9%A6%96%E6%AC%A1%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%92%8C%E6%9B%B4%E6%96%B0%E4%BB%A3%E7%A0%81%E7%9A%84%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[首次使用git上传项目到github在github新建仓库（new repository）安装git（这里省略）首次上传项目安装好git后，右键项目文件夹会先出现git bash here的选项： 点击后出现： 然后分别输入 12345git init//git 初始化git add . // 添加所有文件，注意还有一个点git commit -m &quot;your notes(注释)&quot;git remote add origin yourUrl(仓库链接)git push origin master 如果是第一次使用按要求输入账号信息即可，输入完等待一段时间即可 更新已有仓库的代码同样右键想更新的项目文件夹： 123git add .git commit -m &quot;注释&quot;git push origin master 若要输入账号信息输入后等待一段时间即可。]]></content>
+      <categories>
+        <category>use git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[基于hexo和github搭建个人博客（二个性化）]]></title>
     <url>%2Fblog%2F2017%2F12%2F01%2F%E5%9F%BA%E4%BA%8Ehexo%E5%92%8Cgithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%E4%B8%AA%E6%80%A7%E5%8C%96%EF%BC%89%2F</url>
     <content type="text"><![CDATA[添加tags、categories、about的页面在blog/themes/next/_config_yml文件下修改：把要添加的模块前面的井号#去掉。123456789menu: home: / || home #about: /about/ || user #tags: /tags/ || tags #categories: /categories/ || th archives: /archives/ || archive #schedule: /schedule/ || calendar #sitemap: /sitemap.xml || sitemap #commonweal: /404/ || heartbeat 修改后：123456789menu: home: / || home about: /about/ || user tags: /tags/ || tags categories: /categories/ || th archives: /archives/ || archive #schedule: /schedule/ || calendar #sitemap: /sitemap.xml || sitemap #commonweal: /404/ || heartbeat 在终端输入：123hexo new page tagshexo new page categorieshexo new page about 在目录blog/source下面就会多了tags、categories、about的文件夹tags目录下的index.md12345---title: tagsdate: 2017-11-30 23:42:37tags: &quot;tags&quot;--- categories目录下的index.md12345---title: categoriesdate: 2017-11-30 23:42:37type: &quot;categories&quot;--- about目录下的index.md12345678910111213141516---title: aboutdate: 2017-11-30 23:42:37type: &quot;about&quot;------title: aboutdate: 2017-11-28 18:23:24---## Hello 大家好### 这里是一只前端菜鸟，欢迎大家讨论交流学习- #### From cycle_Ho- #### Contact me：&gt; - ###### QQ：494451589&gt; - ###### Email：494451589@qq.com 这就增加了tags、categories、about的页面以后写文章则在开头： 123456---title: yourTitledate: 2017-12-1 14:12:36tags: [tags1,tags2]categories: 分类--- 增加站内搜索安装hexo-generator-searchdb1npm install hexo-generator-searchdb --save 在blog/_config.yml添加search字段12345search: path: search.xml field: post format: html limit: 10000 在blog/themes/next/_config.yml找到并修改enable： true12local_search: enable: false 刷新浏览器完成了 修改首页文章不展示全部在blog/themes/next/_config.yml文件找auto_excerpt到并修改为：123auto_excerpt: enable: true length: 150 //我觉得是展示长度 修改Sidebar头像在blog/themes/next/_config.yml文件找到Sidebar Avatar：1234# Sidebar Avatar#in theme directory(source/images): /images/avatar.gif#in site directory(source/uploads): /uploads/avatar.gif#avatar: /images/avatar.gif 并修改为：1234# Sidebar Avatarin theme directory(source/images): /images/avatar.gifin site directory(source/uploads): /uploads/avatar.gifavatar: /images/avatar.gif 在blog/themes/next/source/images目录下替换avatar.gif即可增加社交途径在blog/themes/next/_config.yml文件找到：把前面井号#去掉即为增加（主要大小写） 12345678910111213141516171819social: Github: https://github.com/cycleho || github Weibo: https://weibo.com/u/1825215421?referflag=1001030102 || weibo #E-Mail: mailto:yourname@gmail.com || envelope #Google: https://plus.google.com/yourname || google #Twitter: https://twitter.com/yourname || twitter #FB Page: https://www.facebook.com/yourname || facebook #VK Group: https://vk.com/yourname || vk #StackOverflow: https://stackoverflow.com/yourname || stack-overflow #YouTube: https://youtube.com/yourname || youtube #Instagram: https://instagram.com/yourname || instagram #Skype: skype:yourname?call|chat || skypesocial_icons: enable: true icons_only: true//是否只显示图标 transition: false Github: github Weibo: weibo 最后其实想增加更多功能要了解主配置文件（blog/_config.yml）和主题配置文件（blog/themes/next/_config.yml）。 参考：http://theme-next.iissnan.com/]]></content>
@@ -8,8 +20,8 @@
         <category>搭建博客</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
         <tag>github</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -20,14 +32,14 @@
         <category>搭建博客</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
         <tag>github</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[阿里云CentOs 7安装node]]></title>
     <url>%2Fblog%2F2017%2F11%2F28%2F%E9%98%BF%E9%87%8C%E4%BA%91CentOs%207%E5%AE%89%E8%A3%85nodejs%2F</url>
-    <content type="text"><![CDATA[阿里云CentOs 7安装nginx使用XShell连接到目标服务器后把yum更新到最新版本：1yum -y update 将使用最新源代码构建Node.js，要进行软件的安装，需要一组用来编译源代码的开发工具：1yum -y groupinstall &quot;Development Tools&quot; 安装node.js开始安装Node.js，先进入/usr/src文件夹，从Node.js的站点中获取压缩档源代码, 我选择的版本为v6.11.3：12cd /usr/local/srcwget http://nodejs.org/dist/v0.10.18/node-v6..11.3.tar.gz 解压缩源文件，并且进入到压缩后的文件夹中:12tar zxf node-v6..11.3.tar.gz cd node-v6..11.3 执行配置脚本来进行编译预处理:1./configure 开始编译源代码:1make&amp;&amp;make install 测试是否安装成功12node -vnpm -v //npm是模块管理器 若每条命令后面输出版本号即安装成功]]></content>
+    <content type="text"><![CDATA[阿里云CentOs 7安装nginx使用XShell连接到目标服务器后把yum更新到最新版本：1yum -y update 将使用最新源代码构建Node.js，要进行软件的安装，需要一组用来编译源代码的开发工具：1yum -y groupinstall &quot;Development Tools&quot; 安装node.js开始安装Node.js，先进入/usr/src文件夹，从Node.js的站点中获取压缩档源代码, 我选择的版本为v6.11.3：12cd /usr/local/srcwget http://nodejs.org/dist/v0.10.18/node-v6..11.3.tar.gz 解压缩源文件，并且进入到压缩后的文件夹中:12tar zxf node-v6..11.3.tar.gz cd node-v6..11.3 执行配置脚本来进行编译预处理:1./configure 开始编译源代码:1make&amp;&amp;make install 测试是否安装成功12node -vnpm -v //npm是模块管理器 若每条命令后面输出版本号即安装成功 最后0.xxx版本是Joyent公司维护.进展缓慢.但是稳定.4.,5.*版本都是由网友维护的.相对的进展快,增加和许多新功能.偶数开头的是稳定版,奇数开头的开发版就是会不断变化更新.为下一个稳定版本做测试差不多的意思.不过现在都是在nodejs基金会下面.所以咱们在nodejs网站可以看到更新的时候会有很多版本更新.说到区别得看一下nodejs的发展历史.]]></content>
       <categories>
         <category>搭建服务器</category>
       </categories>
