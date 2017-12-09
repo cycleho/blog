@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="css,html,jquery," />
 
 
 
@@ -79,16 +79,20 @@
 
 
 
-<meta name="description" content="一起来玩LOL啊">
-<meta property="og:type" content="website">
-<meta property="og:title" content="cycle_Ho">
-<meta property="og:url" content="http://yoursite.com/blog/index.html">
+<meta name="description" content="写在前面一般使用:12345678document.onreadystatechange//页面加载状态改变时的事件document.readyState//返回页面加载状态//有四种状态;uninitialized//还未开始载入loading//载入中interactive//已加载，文档与用户可以开始使用comp">
+<meta name="keywords" content="css,html,jquery">
+<meta property="og:type" content="article">
+<meta property="og:title" content="几种加载方式">
+<meta property="og:url" content="http://yoursite.com/blog/2017/12/09/几种加载方式/index.html">
 <meta property="og:site_name" content="cycle_Ho">
-<meta property="og:description" content="一起来玩LOL啊">
+<meta property="og:description" content="写在前面一般使用:12345678document.onreadystatechange//页面加载状态改变时的事件document.readyState//返回页面加载状态//有四种状态;uninitialized//还未开始载入loading//载入中interactive//已加载，文档与用户可以开始使用complete//载入完成 使用方法：12345document.onreadysta">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://www.heyuanwei.xin/assets/blog/image/jianrong.png">
+<meta property="og:updated_time" content="2017-12-09T07:53:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="cycle_Ho">
-<meta name="twitter:description" content="一起来玩LOL啊">
+<meta name="twitter:title" content="几种加载方式">
+<meta name="twitter:description" content="写在前面一般使用:12345678document.onreadystatechange//页面加载状态改变时的事件document.readyState//返回页面加载状态//有四种状态;uninitialized//还未开始载入loading//载入中interactive//已加载，文档与用户可以开始使用complete//载入完成 使用方法：12345document.onreadysta">
+<meta name="twitter:image" content="http://www.heyuanwei.xin/assets/blog/image/jianrong.png">
 
 
 
@@ -118,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/blog/"/>
+  <link rel="canonical" href="http://yoursite.com/blog/2017/12/09/几种加载方式/"/>
 
 
 
 
 
-  <title>cycle_Ho</title>
+  <title>几种加载方式 | cycle_Ho</title>
   
 
 
@@ -153,8 +157,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -291,9 +294,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -323,9 +326,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2017/12/09/几种加载方式/" itemprop="url">几种加载方式</a></h1>
+          <h1 class="post-title" itemprop="name headline">几种加载方式</h1>
         
 
         <div class="post-meta">
@@ -397,18 +398,22 @@
       
 
       
-        
-          
-          写在前面一般使用:12345678document.onreadystatechange//页面加载状态改变时的事件document.readyState//返回页面加载状态//有四种状态;uninitialized//还未开始载入loading//载入中interactive//已加载，文档与用户
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/blog/2017/12/09/几种加载方式/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>一般使用:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">document.onreadystatechange//页面加载状态改变时的事件</span><br><span class="line"></span><br><span class="line">document.readyState//返回页面加载状态</span><br><span class="line">//有四种状态;</span><br><span class="line">uninitialized//还未开始载入</span><br><span class="line">loading//载入中</span><br><span class="line">interactive//已加载，文档与用户可以开始使用</span><br><span class="line">complete//载入完成</span><br></pre></td></tr></table></figure></p>
+<p>使用方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">document.onreadystatechange=function()&#123;</span><br><span class="line">    if(doucument.readyState==&quot;complete&quot;)&#123;</span><br><span class="line">        $(&quot;.loader&quot;).fadeOut();//当加载完成，加载页面fadeOut</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="加载页面的方法"><a href="#加载页面的方法" class="headerlink" title="加载页面的方法"></a>加载页面的方法</h1><h2 id="使用gif"><a href="#使用gif" class="headerlink" title="使用gif"></a>使用gif</h2><p>这是最简单的加载页面，但要加载gif文件比较大</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//html</span><br><span class="line">&lt;div  id=&quot;loader1&quot; class=&quot;loader&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;center&quot;&gt;</span><br><span class="line">        &lt;img src=&quot;./img/loading.gif&quot; style=&quot;width: 100px;height: 100px&quot;&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">    </span><br><span class="line">//js</span><br><span class="line">&lt;script&gt; </span><br><span class="line">    document.onreadystatechange=function()&#123;</span><br><span class="line">        if(doucument.readyState==&quot;complete&quot;)&#123;</span><br><span class="line">            $(&quot;#loader1&quot;).fadeOut();//当加载完成，加载页面fadeOut</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="使用非动图"><a href="#使用非动图" class="headerlink" title="使用非动图"></a>使用非动图</h2><p>这里就要用到CSS3，使图片旋转，加载静态图片比动态图片快。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">//主要css,未考虑兼容问题，下面会提到</span><br><span class="line">&lt;style&gt;</span><br><span class="line">    .rotate&#123;</span><br><span class="line">        display: block;</span><br><span class="line">        position: absolute;</span><br><span class="line">        animation: rotate 2s infinite linear;</span><br><span class="line">&#125;</span><br><span class="line">    @keyframes rotate &#123;</span><br><span class="line">        0%&#123;transform: rotate(0deg);&#125;</span><br><span class="line">        100%&#123;transform: rotate(360deg);&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">//html</span><br><span class="line">&lt;div id=&quot;loader2&quot; class=&quot;loader&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;center rotate&quot;&gt;</span><br><span class="line">        &lt;img src=&quot;./img/loading.png&quot; style=&quot;width: 100px;height: 100px&quot;&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">//js</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    document.onreadystatechange=function()&#123;</span><br><span class="line">        if(doucument.readyState==&quot;complete&quot;)&#123;</span><br><span class="line">            $(&quot;#loader2&quot;).fadeOut();//当加载完成，加载页面fadeOut</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="使用纯CSS3"><a href="#使用纯CSS3" class="headerlink" title="使用纯CSS3"></a>使用纯CSS3</h2><p>文件大小最小，加载出来速度最快。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">//主要css,未考虑兼容问题，下面会提到</span><br><span class="line">.loader i&#123;</span><br><span class="line">    display: block;</span><br><span class="line">    float: left;</span><br><span class="line">    width: 6px;</span><br><span class="line">    height: 50px;</span><br><span class="line">    background-color: #52CACC;</span><br><span class="line">    margin: 0 2px;</span><br><span class="line">    transform:scaleY(0.4);</span><br><span class="line">    animation: load 1.2s infinite</span><br><span class="line">&#125;</span><br><span class="line">.loader i:nth-child(2)&#123;animation-delay:0.1s&#125;//第二个i标签延迟0.1s执行动画</span><br><span class="line">.loader i:nth-child(3)&#123;animation-delay:0.2s&#125;</span><br><span class="line">.loader i:nth-child(4)&#123;animation-delay:0.3s&#125;</span><br><span class="line">.loader i:nth-child(5)&#123;animation-delay:0.4s&#125;</span><br><span class="line">@keyframes load &#123;</span><br><span class="line">    0%,40%,100%&#123;transform: scaleY(0.4);&#125;</span><br><span class="line">    20%&#123;transform: scaleY(1);&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//html</span><br><span class="line"> &lt;div id=&quot;loader3&quot; class=&quot;loader none&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;center&quot;&gt;</span><br><span class="line">            &lt;i&gt;&lt;/i&gt;</span><br><span class="line">            &lt;i&gt;&lt;/i&gt;</span><br><span class="line">            &lt;i&gt;&lt;/i&gt;</span><br><span class="line">            &lt;i&gt;&lt;/i&gt;</span><br><span class="line">            &lt;i&gt;&lt;/i&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    </span><br><span class="line">//js</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    document.onreadystatechange=function()&#123;</span><br><span class="line">        if(doucument.readyState==&quot;complete&quot;)&#123;</span><br><span class="line">            $(&quot;#loader3&quot;).fadeOut();//当加载完成，加载页面fadeOut</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="头部加载条"><a href="#头部加载条" class="headerlink" title="头部加载条"></a>头部加载条</h2><p>把页面分成多块，代码执行是由上到下的，每加载一部份就改变加载条信息。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">//主要css</span><br><span class="line">.header&#123;</span><br><span class="line">    position: fixed ;</span><br><span class="line">    width: 0%;</span><br><span class="line">    height: 5px;</span><br><span class="line">    top: 0;</span><br><span class="line">    left: 0;</span><br><span class="line">    background-color: #0ac2d2;</span><br><span class="line">    z-index: 101;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//html主页</span><br><span class="line">&lt;header&gt;</span><br><span class="line">    //代码</span><br><span class="line">&lt;/header&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">    $(&quot;.header&quot;).animate(&#123;width:&quot;30%&quot;&#125;,100);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;section class=&quot;&quot;&gt;</span><br><span class="line">    //代码</span><br><span class="line">&lt;/section&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">    $(&quot;.header&quot;).animate(&#123;width:&quot;30%&quot;&#125;,100);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;section class=&quot;&quot;&gt;</span><br><span class="line">    //代码</span><br><span class="line">&lt;/section&gt;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    $(&quot;.header&quot;).animate(&#123;width:&quot;100%&quot;&#125;,100，function()&#123;</span><br><span class="line">        $(&quot;.header&quot;).fadeOut();</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="兼容问题"><a href="#兼容问题" class="headerlink" title="兼容问题"></a>兼容问题</h1><p>在使用css3的动画时，考虑到浏览器不同，要考虑兼容问题。这里分享一个在线网站可以解决:<br><a href="http://autoprefixer.github.io/" target="_blank" rel="noopener">http://autoprefixer.github.io/</a></p>
+<p><img src="http://www.heyuanwei.xin/assets/blog/image/jianrong.png" alt="image"><br>把兼容后代码替换掉原来的代码即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//兼容代码例子</span><br><span class="line">@-webkit-keyframes load &#123;</span><br><span class="line">    0%,40%,100%&#123;-webkit-transform: scaleY(0.4);transform: scaleY(0.4);&#125;</span><br><span class="line">    20%&#123;-webkit-transform: scaleY(1);transform: scaleY(1);&#125;;&#125;</span><br><span class="line">@keyframes load &#123;</span><br><span class="line">    0%,40%,100%&#123;-webkit-transform: scaleY(0.4);transform: scaleY(0.4);&#125;</span><br><span class="line">    20%&#123;-webkit-transform: scaleY(1);transform: scaleY(1);&#125;;&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h1><p><a href="https://cycleho.github.io/loader/" target="_blank" rel="noopener">https://cycleho.github.io/loader/</a></p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>分享几个加载素材的网站：</p>
+<p><a href="https://loading.io/" target="_blank" rel="noopener">https://loading.io/</a>/加载素材有多种格式，包括gif，svg，css，png。</p>
+<p><a href="http://www.iconfont.cn/" target="_blank" rel="noopener">http://www.iconfont.cn/</a>//阿里巴巴图标库</p>
+
       
     </div>
     
@@ -423,314 +428,40 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/blog/2017/12/09/git首次上传代码和更新代码的方法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cycle_Ho">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="cycle_Ho">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2017/12/09/git首次上传代码和更新代码的方法/" itemprop="url">git首次上传代码和更新代码的方法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-09T14:16:41+08:00">
-                2017-12-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/use-git/" itemprop="url" rel="index">
-                    <span itemprop="name">use git</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/blog/tags/css/" rel="tag"># css</a>
           
-
+            <a href="/blog/tags/html/" rel="tag"># html</a>
           
-            
+            <a href="/blog/tags/jquery/" rel="tag"># jquery</a>
           
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
-          首次使用git上传项目到github在github新建仓库（new repository）安装git（这里省略）首次上传项目安装好git后，右键项目文件夹会先出现git bash here的选项：
-
-点击后出现：
-然后分别输入
-12345git init//git 初始化git add . // 添
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/blog/2017/12/09/git首次上传代码和更新代码的方法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2017/12/09/git首次上传代码和更新代码的方法/" rel="next" title="git首次上传代码和更新代码的方法">
+                <i class="fa fa-chevron-left"></i> git首次上传代码和更新代码的方法
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/blog/2017/12/01/基于hexo和github搭建个人博客（二个性化）/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cycle_Ho">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="cycle_Ho">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2017/12/01/基于hexo和github搭建个人博客（二个性化）/" itemprop="url">基于hexo和github搭建个人博客（二个性化）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-01T14:12:36+08:00">
-                2017-12-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/搭建博客/" itemprop="url" rel="index">
-                    <span itemprop="name">搭建博客</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          添加tags、categories、about的页面在blog/themes/next/_config_yml文件下修改：把要添加的模块前面的井号#去掉。123456789menu:  home: / || home  #about: /about/ || user  #tags: /tags/ |
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/blog/2017/12/01/基于hexo和github搭建个人博客（二个性化）/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -740,583 +471,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/blog/2017/11/28/基于hexo和github搭建个人博客（一）/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cycle_Ho">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="cycle_Ho">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2017/11/28/基于hexo和github搭建个人博客（一）/" itemprop="url">基于hexo和github搭建个人博客（一）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-28T21:00:48+08:00">
-                2017-11-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/搭建博客/" itemprop="url" rel="index">
-                    <span itemprop="name">搭建博客</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          基于hexo和github搭建个人博客搭建Github注册github账号在自己的github上创建仓库 (new repository)
-安装Git由于安装Git比较简单这里不细说了，请自行百度，当输入命令后输出版本信息即为安装成功了12# git --versiongit version 1.8
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/blog/2017/11/28/基于hexo和github搭建个人博客（一）/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/blog/2017/11/28/阿里云CentOs 7安装nodejs/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cycle_Ho">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="cycle_Ho">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2017/11/28/阿里云CentOs 7安装nodejs/" itemprop="url">阿里云CentOs 7安装node</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-28T20:27:21+08:00">
-                2017-11-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/搭建服务器/" itemprop="url" rel="index">
-                    <span itemprop="name">搭建服务器</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          阿里云CentOs 7安装nginx使用XShell连接到目标服务器后把yum更新到最新版本：1yum -y update
-将使用最新源代码构建Node.js，要进行软件的安装，需要一组用来编译源代码的开发工具：1yum -y groupinstall &quot;Development Tools
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/blog/2017/11/28/阿里云CentOs 7安装nodejs/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/blog/2017/11/28/阿里云CentOs 7安装nginx/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cycle_Ho">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="cycle_Ho">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2017/11/28/阿里云CentOs 7安装nginx/" itemprop="url">阿里云CentOs 7安装nginx</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-28T19:40:50+08:00">
-                2017-11-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/搭建服务器/" itemprop="url" rel="index">
-                    <span itemprop="name">搭建服务器</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          阿里云CentOs 7下安装nginx安装所需环境Nginx 是 C语言 开发，建议在 Linux 上运行，当然，也可以安装 Windows 版本，本篇则使用 CentOS 7 作为安装环境。
-gcc 安装安装 nginx 需要先将官网下载的源码进行编译，编译依赖 gcc 环境，如果没有 gcc 环
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/blog/2017/11/28/阿里云CentOs 7安装nginx/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/blog/2017/11/27/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cycle_Ho">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="cycle_Ho">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2017/11/27/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-27T19:50:10+08:00">
-                2017-11-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/blog/2017/11/27/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -1324,6 +483,10 @@ gcc 安装安装 nginx 需要先将官网下载的源码进行编译，编译依
 
 
           
+
+  
+
+
 
         </div>
         
@@ -1344,8 +507,17 @@ gcc 安装安装 nginx 需要先将官网下载的源码进行编译，编译依
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1431,6 +603,22 @@ gcc 安装安装 nginx 需要先将官网下载的源码进行编译，编译依
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#加载页面的方法"><span class="nav-number">2.</span> <span class="nav-text">加载页面的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用gif"><span class="nav-number">2.1.</span> <span class="nav-text">使用gif</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用非动图"><span class="nav-number">2.2.</span> <span class="nav-text">使用非动图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用纯CSS3"><span class="nav-number">2.3.</span> <span class="nav-text">使用纯CSS3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#头部加载条"><span class="nav-number">2.4.</span> <span class="nav-text">头部加载条</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#兼容问题"><span class="nav-number">3.</span> <span class="nav-text">兼容问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#效果"><span class="nav-number">4.</span> <span class="nav-text">效果</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最后"><span class="nav-number">5.</span> <span class="nav-text">最后</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1571,6 +759,10 @@ gcc 安装安装 nginx 需要先将官网下载的源码进行编译，编译依
 
 
   
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 
