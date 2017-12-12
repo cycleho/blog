@@ -52,7 +52,7 @@
   <entry>
     <title><![CDATA[阿里云CentOs 7安装node]]></title>
     <url>%2Fblog%2F2017%2F11%2F28%2F%E9%98%BF%E9%87%8C%E4%BA%91CentOs%207%E5%AE%89%E8%A3%85nodejs%2F</url>
-    <content type="text"><![CDATA[阿里云CentOs 7安装nginx使用XShell连接到目标服务器后把yum更新到最新版本：1yum -y update 将使用最新源代码构建Node.js，要进行软件的安装，需要一组用来编译源代码的开发工具：1yum -y groupinstall &quot;Development Tools&quot; 安装node.js开始安装Node.js，先进入/usr/src文件夹，从Node.js的站点中获取压缩档源代码, 我选择的版本为v6.11.3：12cd /usr/local/srcwget http://nodejs.org/dist/v0.10.18/node-v6..11.3.tar.gz 解压缩源文件，并且进入到压缩后的文件夹中:12tar zxf node-v6..11.3.tar.gz cd node-v6..11.3 执行配置脚本来进行编译预处理:1./configure 开始编译源代码:1make&amp;&amp;make install 测试是否安装成功12node -vnpm -v //npm是模块管理器 若每条命令后面输出版本号即安装成功 最后0.xxx版本是Joyent公司维护.进展缓慢.但是稳定.4.,5.*版本都是由网友维护的.相对的进展快,增加和许多新功能.偶数开头的是稳定版,奇数开头的开发版就是会不断变化更新.为下一个稳定版本做测试差不多的意思.不过现在都是在nodejs基金会下面.所以咱们在nodejs网站可以看到更新的时候会有很多版本更新.说到区别得看一下nodejs的发展历史.]]></content>
+    <content type="text"><![CDATA[阿里云CentOs 7安装nginx使用XShell连接到目标服务器后把yum更新到最新版本：1yum -y update 将使用最新源代码构建Node.js，要进行软件的安装，需要一组用来编译源代码的开发工具：1yum -y groupinstall &quot;Development Tools&quot; 安装node.js开始安装Node.js，先进入/usr/src文件夹，从Node.js的站点中获取压缩档源代码, 我选择的版本为v6.11.3：12cd /usr/local/srcwget http://nodejs.org/dist/v0.10.18/node-v0.10.18.tar.gz 解压缩源文件，并且进入到压缩后的文件夹中:12tar zxf node-v0.10.18.tar.gz cd node-v0.10.18 执行配置脚本来进行编译预处理:1./configure 开始编译源代码:1make&amp;&amp;make install 测试是否安装成功12node -vnpm -v //npm是模块管理器 若每条命令后面输出版本号即安装成功 最后0.xxx版本是Joyent公司维护.进展缓慢.但是稳定.4.,5.*版本都是由网友维护的.相对的进展快,增加和许多新功能.偶数开头的是稳定版,奇数开头的开发版就是会不断变化更新.为下一个稳定版本做测试差不多的意思.不过现在都是在nodejs基金会下面.所以咱们在nodejs网站可以看到更新的时候会有很多版本更新.说到区别得看一下nodejs的发展历史.]]></content>
       <categories>
         <category>搭建服务器</category>
       </categories>
